@@ -1,7 +1,10 @@
 import axios from "axios";
+import getUsers from "../users";
 
 jest.mock("axios");
-const { default: getUsers } = require("../users");
+// TODO feedback: 使用import导入default就好了
+
+// const { default: getUsers } = require("../users");
 
 describe("users", () => {
   test("should get users data with mock axios get", async () => {
